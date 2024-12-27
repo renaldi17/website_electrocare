@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: 'Poppins', sans serif;
+}
+/*button*/
+.btn-success{
+    background-color: #FF2323;
+    border-radius: 10px;
+    border-color: #FF2323;
+    padding: 10px 45px;
+    color: white;
+}
+
+/* nav*/
+.nav-item .nav-link{
+    font-size: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.scroll-nav-active{
+    background-color: white;
+    border-bottom: 2px solid green;
+}
+
+.text-nav-active{
+    color: black;
+}
+
+#hero{
+    background-image: url("../../assets/image/dummy1.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+}
+
+.hero-title{
+    padding-top: 200px;
+}
+
+.hero-text{
+    font-size: 65px;
+    font-weight: 600;
+    stroke-dashoffset: 10;
+}
+
+.stripe{
+    height: 5px;
+    width: 20px;
+    background-color: #FF2323;
+}
+
+/*Foto*/
+/*Parallax*/
+.section-foto-kegiatan{
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax{
+    background-image: url("../../assets/image/dummy2.png");
+}
+
+.stripe-putih{
+    height: 5px;
+    width: 40px;
+    background-color: white;
+}

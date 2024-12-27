@@ -1,0 +1,60 @@
+/* navbar.css */
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-nav .nav-link {
+  color: #000;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 0 20px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff0000;
+}
+
+.btn-link {
+  color: #000;
+  font-size: 1.2rem;
+  padding: 0 10px;
+}
+
+.btn-link:hover {
+  color: #ff0000;
+}
+
+/* Dropdown styling */
+.dropdown-menu {
+  border-radius: 0;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dropdown-item {
+  padding: 8px 20px;
+  font-size: 0.9rem;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #ff0000;
+}
+
+/* Active states */
+.nav-link.active,
+.nav-link[href="/products"] {
+  color: #ff0000;
+}
+
+/* Dropdown arrow */
+.dropdown-toggle::after {
+  vertical-align: middle;
+}
+
+/* Right-aligned user dropdown */
+.dropdown-menu-end {
+  right: 0;
+  left: auto;
+}
