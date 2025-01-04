@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-K_KHAcB3fkb8nGyZ"></script>
 
     {{-- Summernote CSS di antara Head--}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.css" />
@@ -41,11 +42,11 @@
         const navbar = document.querySelector(".fixed-top");
         window.onscroll = () =>{
             if (window.scrollY > 100) {
-                navbar.classList.add("scroll-nav-active");
-                navbar.classList.add("text-nav-active");
+                navbar?.classList.add("scroll-nav-active");
+                navbar?.classList.add("text-nav-active");
                 // navbar.classList.remove("navbar-dark");
             } else {
-                navbar.classList.remove("scroll-nav-active");
+                navbar?.classList.remove("scroll-nav-active");
                 // navbar.classList.add("navbar-dark");
             }
         };

@@ -14,15 +14,17 @@
         @foreach ($products as $product)
             <div class="col-md-3 mb-4">
                 <div class="card">
-                    <div class="product-images">
-                        <img src="{{ asset('storage/' . $product->gambar) }}" class="card-img-top" alt="{{ $product->nama }}">
-                    </div>
-                    <div class="card-body">
-                        <span class="badge bg-warning">{{ ucfirst($product->kategori) }}</span>
-                        <h5 class="card-title">{{ $product->nama }}</h5>
-                        <p class="card-text">Rp {{ number_format($product->harga, 0, ',', '.') }}</p>
-                        <a href="{{ route('detail_product', $product->id) }}" class="btn btn-primary">Detail</a>
-                    </div>
+                    <a href="{{ route('detail_product', $product->id) }}">
+                        <div class="product-images">
+                            <img src="{{ asset('storage/' . $product->gambar) }}" class="card-img-top" alt="{{ $product->nama }}">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-warning">{{ ucfirst($product->kategori) }}</span>
+                            <h5 class="card-title">{{ $product->nama }}</h5>
+                            <p class="card-text">Rp {{ number_format($product->harga, 0, ',', '.') }}</p>
+                            {{-- <a href="{{ route('detail_product', $product->id) }}" class="btn btn-primary">Detail</a> --}}
+                        </div>
+                    </a>
                 </div>
             </div>
         @endforeach
@@ -43,6 +45,12 @@
 </div>
 
 <style>
+
+/* .product-images {
+    width: 300px;
+    height: 120px;
+} */
+
 .search-input {
     width: 50%;
     padding: 8px;

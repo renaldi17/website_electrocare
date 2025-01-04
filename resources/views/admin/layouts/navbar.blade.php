@@ -68,6 +68,13 @@
                         </div>
                         Project
                     </a>
+                    <a class="nav-link" 
+                    href="/admin/order">
+                        <div class="sb-nav-link-icon">
+                            <i class="fas fa-data"></i>
+                        </div>
+                        Order
+                    </a>
                     <div class="sb-sidenav-menu-heading">Interface</div>
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                         data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">

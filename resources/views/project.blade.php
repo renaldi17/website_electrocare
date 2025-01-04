@@ -19,7 +19,7 @@
                     <div class="card-body">
                         <span class="badge bg-info">{{ ucfirst($project->kategori) }}</span>
                         <h5 class="card-title">{{ $project->nama }}</h5>
-                        <p class="card-text">{{ Str::limit($project->deskripsi, 50) }}</p>
+                        <p class="card-text">Rp {{ number_format($project->harga, 0, ',', '.') }}</p>
                     </div>
                 </a>
             </div>

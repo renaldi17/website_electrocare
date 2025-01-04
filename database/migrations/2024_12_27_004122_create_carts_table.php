@@ -16,7 +16,8 @@ public function up()
     Schema::create('carts', function (Blueprint $table) {
         $table->id();
         $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Relasi dengan user
-        $table->foreignId('product_id')->constrained()->onDelete('cascade'); // Relasi dengan produk
+        $table->foreignId('product_id')->constrained()->onDelete('cascade'); 
+        $table->foreignId('project_id')->nullable()->constrained()->onDelete('cascade'); // Tambahkan ini// Relasi dengan produk
         $table->integer('quantity')->default(1); // Jumlah produk
         $table->decimal('subtotal', 10, 2)->nullable(); // Subtotal harga produk
         $table->timestamps();

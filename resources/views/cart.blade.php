@@ -11,11 +11,19 @@
                     <div class="card mb-3">
                         <div class="card-body">
                             <div class="d-flex">
-                                <img src="{{ asset('storage/' . $item->product->gambar) }}" class="img-fluid" style="width: 100px;">
-                                <div class="flex-grow-1">
-                                    <h5>{{ $item->product->nama }}</h5>
-                                    <p>Rp {{ number_format($item->product->harga, 0, ',', '.') }} x {{ $item->quantity }}</p>
-                                </div>
+                                @if ($item->product)
+                                    <img src="{{ asset('storage/' . $item->product->gambar) }}" class="img-fluid" style="width: 100px;">
+                                    <div class="flex-grow-1">
+                                        <h5>{{ $item->product->nama }}</h5>
+                                        <p>Rp {{ number_format($item->product->harga, 0, ',', '.') }} x {{ $item->quantity }}</p>
+                                    </div>
+                                @elseif ($item->project)
+                                    <img src="{{ asset('storage/' . $item->project->gambar) }}" class="img-fluid" style="width: 100px;">
+                                    <div class="flex-grow-1">
+                                        <h5>{{ $item->project->nama }}</h5>
+                                        <p>Rp {{ number_format($item->project->harga, 0, ',', '.') }} x {{ $item->quantity }}</p>
+                                    </div>
+                                @endif
                                 <div class="d-flex align-items-center">
                                     <form action="{{ route('cart.remove', $item->id) }}" method="POST">
                                         @csrf

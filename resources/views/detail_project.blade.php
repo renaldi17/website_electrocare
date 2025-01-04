@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-<div class="container">
+<div class="container py-5">
     <div class="row">
         <!-- Kolom Gambar Project -->
         <div class="col-md-4">
@@ -52,6 +52,30 @@
             </div>
         </div>
     </div>
+
+    {{-- Section Recommendation --}}
+    <div class="container py-4">
+        <h1>Recommend For You</h1>
+        <div class="row">
+            @foreach ($recommends as $project)                
+            <div class="col-md-3 mt-2 mb-4">
+                <div class="card">
+                    <a href="{{ route('detail_project', $project->id) }}">
+                        <div class="product-images">
+                            <img src="{{ asset('storage/' . $project->gambar) }}" class="card-img-top" alt="">
+                        </div>
+                        <div class="card-body">
+                            <span class="badge bg-primary">{{ $project->kategori }}</span>
+                            <h5 class="card-title">{{ $project->nama }}</h5>
+                            <p class="card-text">Rp. {{ $project->harga }}</p>
+                            {{-- <a href="" class="btn btn-primary">Detail</a> --}}
+                        </div>
+                    </a>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
 </div>
 
 <style>
@@ -64,9 +88,19 @@
     .product-details {
         padding-right: 20px;
     }
+
+    .card-rec {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+    .badge {
+        margin-bottom: 10px;
+    }
     
     .card {
-        position: sticky;
+        /* position: sticky; */
         top: 20px;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);

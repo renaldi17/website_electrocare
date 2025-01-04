@@ -56,7 +56,7 @@
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
           @auth
             <li><a class="dropdown-item" href="/profile">Profile</a></li>
-            <li><a class="dropdown-item" href="/pesanan">Pesanan Anda</a></li>
+            <li><a class="dropdown-item" href="/order">Pesanan Anda</a></li>
             <li><hr class="dropdown-divider"></li>
             <li>
               <form action="/logout" method="POST" class="d-inline">

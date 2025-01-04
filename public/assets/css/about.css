@@ -1,0 +1,75 @@
+#about {
+    background-color: #f8f9fa;
+}
+
+#contact{
+    background-color: #ff2323;
+}
+.logo-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.logo-item {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.team-member {
+    margin: 0 15px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.text-danger {
+    color: #ff2323;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jarak antar item */
+}
+
+.contact-item {
+    background-color: #ff2323; /* Mengubah latar belakang menjadi merah */
+    border-radius: 10px; /* Sudut melengkung */
+    padding: 20px; /* Padding di dalam item */
+    text-align: center; /* Teks di tengah */
+    width: 150px; /* Lebar item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek 3D */
+}
+
+.contact-link {
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: black; /* Warna teks hitam */
+    display: flex;
+    flex-direction: column; /* Teks di bawah ikon */
+    align-items: center; /* Rata tengah */
+}
+
+.contact-link i {
+    font-size: 24px; /* Ukuran ikon */
+    margin-bottom: 10px; /* Jarak antara ikon dan teks */
+}

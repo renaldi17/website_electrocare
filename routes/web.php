@@ -6,10 +6,8 @@ use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\OrderController;
 
-Route::get('/products', function () {
-    return view('product');
-});
 
 Route::get('/detail_product', function () {
     return view('detail_product');
@@ -17,6 +15,10 @@ Route::get('/detail_product', function () {
 
 Route::get('/project', function () {
     return view('project');
+});
+
+Route::get('/about', function () {
+    return view('about');
 });
 
 // Auth Route
@@ -55,13 +57,19 @@ Route::middleware(['auth'])-> group(function () {
 
     Route::resource('admin/product', ProductController::class);
 
-    Route::post('/cart/{productId}', [CartController::class, 'addToCart'])->name('cart.add');
+    Route::post('/cart/{type}/{itemId}', [CartController::class, 'addToCart'])->name('cart.add');
     Route::get('/cart', [CartController::class, 'showCart'])->name('cart.index');
     Route::delete('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
-    Route::get('/cart', [CheckoutController::class, 'showCart'])->name('cart.show');
 
     Route::get('/checkout', [CheckoutController::class, 'checkout'])->name('checkout.show');
     Route::post('/checkout', [CheckoutController::class, 'processCheckout'])->name('checkout.process');
-    Route::get('/checkout/success', [CheckoutController::class, 'success'])->name('checkout.success');
+    Route::get('/checkout/success/{id}', [CheckoutController::class, 'success'])->name('checkout.success');
+    Route::get('/checkout/failed/{id}', [CheckoutController::class, 'failed'])->name('checkout.failed');
 
+    Route::get('/order',[OrderController::class, 'showOrder'] )->name('showOrder');
+    Route::resource('admin/order', OrderController::class);
+
+    Route::get('/faktur', function () {
+        return view('faktur');
+    });
 });
