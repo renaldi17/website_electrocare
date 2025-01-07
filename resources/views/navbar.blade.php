@@ -18,27 +18,27 @@
           <a class="nav-link" href="/about">ABOUT</a>
         </li>
         <!-- Products Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item ">
+          <a class="nav-link " href="/products" id="productsDropdown" role="button" >
             PRODUCTS
           </a>
-          <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+          {{--  <ul class="dropdown-menu" aria-labelledby="productsDropdown">
             <li><a class="dropdown-item" href="/products">Mikrokontroller</a></li>
             <li><a class="dropdown-item" href="/products">Sensor</a></li>
             <li><a class="dropdown-item" href="/products">Aktuator</a></li>
             <li><a class="dropdown-item" href="/products">Other</a></li>
-          </ul>
+          </ul>  --}}
         </li>
         <!-- Projects Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="projectsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li class="nav-item ">
+          <a class="nav-link" href="/projects" id="projectsDropdown" role="button">
             PROJECTS
           </a>
-          <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
+          {{--  <ul class="dropdown-menu" aria-labelledby="projectsDropdown">
             <li><a class="dropdown-item" href="/projects">Sistem Berbasis Komputer</a></li>
             <li><a class="dropdown-item" href="/projects">Mekatronika</a></li>
             <li><a class="dropdown-item" href="/projects">Sistem Tertanam</a></li>
-          </ul>
+          </ul>  --}}
         </li>
       </ul>
     </div>
@@ -66,7 +66,7 @@
             </li>
           @else
             <li><a class="dropdown-item" href="/login">Masuk</a></li>
-            <li><a class="dropdown-item" href="/admin/dashboard">Admin Page</a></li>
+            {{--  <li><a class="dropdown-item" href="/admin/dashboard">Admin Page</a></li>  --}}
           @endauth
         </ul>
       </div>

@@ -1,9 +1,9 @@
 @extends('layout')
 
 @section('content')
-<div class="container mt-4">
+<div class="container mt-4  pb-5">
     <h1>Keranjang Belanja</h1>
-    <div class="row">
+    <div class="row pb-5">
         <div class="col-md-9">
 
             <div class="cart-items">
@@ -38,7 +38,7 @@
             </div>
 
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 ">
             <!-- Total Subtotal -->
             <div class="card shadow-sm">
                 <div class="card-body">

@@ -7,6 +7,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\Admin\UserController;
 
 
 Route::get('/detail_product', function () {
@@ -34,9 +35,12 @@ Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+// Route::get('/', function () {
+//     return view('index');
+// })->name('home');
+
+Route::get('/', [ProjectController::class, 'getRecentProjects'])->name('home');
+
 
 Route::get('/products', [ProductController::class, 'list'])->name('product');
 Route::get('/products/{product}', [ProductController::class, 'detail'])->name('detail_product');
@@ -52,7 +56,7 @@ Route::middleware(['auth'])-> group(function () {
     Route::get('/admin', function () {
         return view('admin.dashboard');
     });
-    
+
     Route::resource('admin/project', ProjectController::class);
 
     Route::resource('admin/product', ProductController::class);
@@ -72,4 +76,10 @@ Route::middleware(['auth'])-> group(function () {
     Route::get('/faktur', function () {
         return view('faktur');
     });
+
+    // User Routes
+    Route::resource('admin/user', UserController::class);
+
+    Route::get('/profile', [UserController::class, 'showProfile'])->name('profile.show');
+    Route::put('/user/{user}', [UserController::class, 'updateProfile'])->name('user.update');
 });

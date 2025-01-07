@@ -1,60 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-body{
-    font-family: 'Poppins', sans serif;
+body {
+    font-family: "Poppins", sans serif;
 }
 /*button*/
-.btn-success{
-    background-color: #FF2323;
+.btn-success {
+    background-color: #ff2323;
     border-radius: 10px;
-    border-color: #FF2323;
+    border-color: #ff2323;
     padding: 10px 45px;
     color: white;
 }
 
+.text-dark {
+    color: black !important; /* Mengatur warna teks menjadi hitam */
+}
+
+.text-decoration-none {
+    text-decoration: none !important; /* Menghapus dekorasi teks */
+}
+
 /* nav*/
-.nav-item .nav-link{
-    font-size: 18px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.scroll-nav-active{
+.navbar {
     background-color: white;
-    border-bottom: 2px solid green;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.text-nav-active{
-    color: black;
+.navbar-nav .nav-link {
+    color: #000;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0 20px;
 }
 
-#hero{
-    background-image: url("../../assets/image/dummy1.PNG");
+.navbar-nav .nav-link:hover {
+    color: #ff0000;
+}
+
+.btn-link {
+    color: #000;
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+
+.btn-link:hover {
+    color: #ff0000;
+}
+
+/* Dropdown styling */
+.dropdown-menu {
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #ff0000;
+}
+
+/* Active states */
+.nav-link.active,
+.nav-link[href="/products"] {
+    color: #000000;
+}
+
+/* Dropdown arrow */
+.dropdown-toggle::after {
+    vertical-align: middle;
+}
+
+/* Right-aligned user dropdown */
+.dropdown-menu-end {
+    right: 0;
+    left: auto;
+}
+
+#hero {
+    background-image: url("../../assets/image/bgbgbg.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 600px;
 }
 
-.hero-title{
+.hero-title {
     padding-top: 200px;
 }
 
-.hero-text{
+.hero-text {
     font-size: 65px;
     font-weight: 600;
     stroke-dashoffset: 10;
 }
 
-.stripe{
+.stripe {
     height: 5px;
     width: 20px;
-    background-color: #FF2323;
+    background-color: #ff2323;
 }
 
 /*Foto*/
 /*Parallax*/
-.section-foto-kegiatan{
+.section-foto-kegiatan {
     background-attachment: fixed;
     background-position: top;
     background-size: cover;
@@ -66,11 +119,11 @@ body{
     align-items: center;
 }
 
-.parallax{
-    background-image: url("../../assets/image/dummy2.png");
+.parallax {
+    background-image: url("../../assets/image/bgbgbg.svg");
 }
 
-.stripe-putih{
+.stripe-putih {
     height: 5px;
     width: 40px;
     background-color: white;

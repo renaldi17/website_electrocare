@@ -5,17 +5,17 @@
     </a>
     <!-- Sidebar Toggle-->
     <button class="btn btn-link btn-sm order-lg-0 me-lg-0 order-1 me-4" id="sidebarToggle" href="#!">
-        <i class="fas fa-bars"></i>
+        {{--  <i class="fas fa-bars"></i>  --}}
     </button>
     <!-- Navbar-->
     <ul class="navbar-nav d-none d-md-inline-block form-inline me-md-3 my-md-0 my-2 me-0 ms-auto">
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+            {{--  <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"  --}}
                 data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-user fa-fw"></i>
+                {{--  <i class="fas fa-user fa-fw"></i>  --}}
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="">Profile</a></li>
+                {{--  <li><a class="dropdown-item" href="">Profile</a></li>  --}}
                 {{-- <li><a class="dropdown-item" href="#!">Activity Log</a></li> --}}
                 <li>
                     <hr class="dropdown-divider" />
@@ -54,36 +54,43 @@
                         </div>
                         Dashboard
                     </a>
-                    <a class="nav-link" 
+                    <a class="nav-link"
                     href="/admin/product">
                         <div class="sb-nav-link-icon">
                             <i class="fas fa-product"></i>
                         </div>
                         Product
                     </a>
-                    <a class="nav-link" 
+                    <a class="nav-link"
                     href="/admin/project">
                         <div class="sb-nav-link-icon">
                             <i class="fas fa-data"></i>
                         </div>
                         Project
                     </a>
-                    <a class="nav-link" 
+                    <a class="nav-link"
                     href="/admin/order">
                         <div class="sb-nav-link-icon">
                             <i class="fas fa-data"></i>
                         </div>
                         Order
                     </a>
-                    <div class="sb-sidenav-menu-heading">Interface</div>
+                    <a class="nav-link"
+                    href="/admin/user">
+                        <div class="sb-nav-link-icon">
+                            <i class="fas fa-data"></i>
+                        </div>
+                        User
+                    </a>
+                    {{--  {{--  <div class="sb-sidenav-menu-heading">Interface</div>  --}}
                     <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                         data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon">
-                            <i class="fas fa-columns"></i>
+                            {{--  <i class="fas fa-columns"></i>  --}}
                         </div>
-                        Interface
+                        {{--  Interface  --}}
                         <div class="sb-sidenav-collapse-arrow">
-                            <i class="fas fa-angle-down"></i>
+                            {{--  <i class="fas fa-angle-down"></i>  --}}
                         </div>
                     </a>
                     <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
@@ -91,8 +98,8 @@
                         <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link" >
                                 {{-- href="{{ route('about.index') }}"> --}}
-                                About
-                            </a>
+                                {{--  About
+                            </a>  --}}
                             {{-- <a class="nav-link" href="{{ route('profil.index') }}">
                                 Profil
                             </a>
@@ -162,7 +169,7 @@
                                     </a>
                                     <a class="nav-link" href="{{ route('produk_hukum.index') }}">
                                         Produk Hukum
-                                    </a> 
+                                    </a>
                                 </nav>
                             </div>
                         </nav>

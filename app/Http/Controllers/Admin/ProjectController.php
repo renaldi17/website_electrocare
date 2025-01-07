@@ -109,10 +109,10 @@ class ProjectController extends Controller
         $articles = Project::all();
         $stopwords = [
             // Bahasa Indonesia
-            'dan', 'atau', 'adalah', 'yang', 'di', 'ke', 'dari', 'ini', 'itu', 'untuk', 'dengan', 
+            'dan', 'atau', 'adalah', 'yang', 'di', 'ke', 'dari', 'ini', 'itu', 'untuk', 'dengan',
             'sebuah', 'pada', 'oleh', 'kami', 'kita', 'saya', 'aku', 'anda', 'mereka', 'tidak',
             // Bahasa Inggris
-            'and', 'or', 'is', 'the', 'on', 'in', 'at', 'of', 'this', 'that', 'for', 'with', 
+            'and', 'or', 'is', 'the', 'on', 'in', 'at', 'of', 'this', 'that', 'for', 'with',
             'a', 'an', 'to', 'by', 'we', 'our', 'i', 'you', 'they', 'not'
         ];
         // Cari artikel target berdasarkan ID
@@ -149,9 +149,9 @@ class ProjectController extends Controller
         arsort($similarities);
         // Ambil artikel dengan kesamaan tertinggi, kecuali artikel target
 
-       
+
         $recommendedIndexes = collect($similarities)
-            ->filter(fn($score, $index) => $index !== $targetIndex && $score > 0.7) // Filter skor di atas 0.4
+            ->filter(fn($score, $index) => $index !== $targetIndex && $score > 0.8) // Filter skor di atas 0.4
             ->take(4) // Ambil 5 hasil teratas
             ->keys();
         // Kembalikan artikel yang direkomendasikan
@@ -168,5 +168,11 @@ class ProjectController extends Controller
         }
 
         return $dotProduct / ($magnitude1 * $magnitude2);
+    }
+
+    public function getRecentProjects()
+    {
+        $projects = Project::latest()->take(3)->get(); // Ambil 3 project terbaru
+        return view('index', compact('projects')); // Kembalikan ke view index
     }
 }
