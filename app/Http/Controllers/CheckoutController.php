@@ -65,9 +65,9 @@ class CheckoutController extends Controller
                 'email' => Auth::user()->email,
             )
         );
-        
+
         $snapToken = \Midtrans\Snap::getSnapToken($params);
-    
+
         $checkout = new Order();
         $checkout->alamat = $request->alamat;
         $checkout->no_hp = $request->no_hp;
@@ -89,7 +89,7 @@ class CheckoutController extends Controller
         ->update([
             'status' => 'paid', // Removed the trailing space
         ]);
-        
+
         return response()->json([
             'message' => 'Payment successful',
             'order_id' => $id
@@ -102,7 +102,7 @@ class CheckoutController extends Controller
         ->update([
             'status' => 'failed', // Removed the trailing space
         ]);
-        
+
         return response()->json([
             'message' => 'Payment Failure, kamu harus order ulang',
             'order_id' => $id

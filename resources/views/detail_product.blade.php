@@ -42,7 +42,7 @@
             @foreach ($recommends as $product)
                 <div class="col-md-3 mt-2 mb-4">
                     <div class="card">
-                        <a href="{{ route('detail_product', $product->id) }}">
+                        <a href="{{ route('detail_product', $product->id) }}" style="text-decoration: none; color: black;">
                             <div class="product-images">
                                 <img src="{{  asset('storage/' . $product->gambar) }}" class="card-img-top" alt="">
                             </div>
@@ -66,7 +66,7 @@
         padding: 10px;
         border-radius: 8px;
     }
-    
+
     .product-details {
         padding-right: 20px;
     }
@@ -87,46 +87,46 @@
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    
+
     .quantity-control {
         display: flex;
         gap: 10px;
         align-items: center;
         margin: 20px 0;
     }
-    
+
     .quantity-control input {
         width: 60px;
         text-align: center;
     }
-    
+
     .subtotal {
         display: flex;
         justify-content: space-between;
         margin: 20px 0;
         font-weight: bold;
     }
-    
+
     .detail-section {
         margin: 30px 0;
     }
-    
+
     h1 {
         font-size: 1.5rem;
         margin-bottom: 10px;
     }
-    
+
     h2 {
         color: #ff0000;
         font-size: 1.8rem;
         margin-bottom: 20px;
     }
-    
+
     .btn-danger {
         background-color: #ff0000;
         border: none;
     }
-    
+
     .btn-danger:hover {
         background-color: #dd0000;
     }
@@ -135,6 +135,12 @@
     overflow-x: auto;
     font-size: 0.9em;
     line-height: 1.5;
+    }
+
+    .product-images img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
     }
 </style>
 <script>

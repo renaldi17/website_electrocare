@@ -26,9 +26,9 @@
                 @else
                     <p class="text-danger">Source code tidak tersedia.</p>
                 @endif
-            </div>            
+            </div>
         </div>
-        
+
         <!-- Kolom Card Jumlah (Kanan) -->
         <div class="col-md-3">
             <div class="card">
@@ -47,7 +47,7 @@
                         </div>
                         <button type="submit" class="btn btn-danger w-100">Keranjang</button>
                     </form>
-                    
+
                 </div>
             </div>
         </div>
@@ -57,10 +57,10 @@
     <div class="container py-4">
         <h1>Recommend For You</h1>
         <div class="row">
-            @foreach ($recommends as $project)                
+            @foreach ($recommends as $project)
             <div class="col-md-3 mt-2 mb-4">
                 <div class="card">
-                    <a href="{{ route('detail_project', $project->id) }}">
+                    <a href="{{ route('detail_project', $project->id) }}" style="text-decoration: none; color: black;">
                         <div class="product-images">
                             <img src="{{ asset('storage/' . $project->gambar) }}" class="card-img-top" alt="">
                         </div>
@@ -79,12 +79,12 @@
 </div>
 
 <style>
-    .product-image {
-        border: 1px solid #ddd;
-        padding: 10px;
-        border-radius: 8px;
+    .product-images img {
+        width: 100%; /* Mengatur lebar gambar agar memenuhi kontainer */
+        height: 200px; /* Mengatur tinggi gambar agar sama */
+        object-fit: cover; /* Memastikan gambar tidak terdistorsi */
     }
-    
+
     .product-details {
         padding-right: 20px;
     }
@@ -98,53 +98,53 @@
     .badge {
         margin-bottom: 10px;
     }
-    
+
     .card {
         /* position: sticky; */
         top: 20px;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    
+
     .quantity-control {
         display: flex;
         gap: 10px;
         align-items: center;
         margin: 20px 0;
     }
-    
+
     .quantity-control input {
         width: 60px;
         text-align: center;
     }
-    
+
     .subtotal {
         display: flex;
         justify-content: space-between;
         margin: 20px 0;
         font-weight: bold;
     }
-    
+
     .detail-section {
         margin: 30px 0;
     }
-    
+
     h1 {
         font-size: 1.5rem;
         margin-bottom: 10px;
     }
-    
+
     h2 {
         color: #ff0000;
         font-size: 1.8rem;
         margin-bottom: 20px;
     }
-    
+
     .btn-danger {
         background-color: #ff0000;
         border: none;
     }
-    
+
     .btn-danger:hover {
         background-color: #dd0000;
     }

@@ -134,6 +134,7 @@ class ProjectController extends Controller
 
         // Hitung TF-IDF untuk setiap dokumen
         $tfidfDocs = $tfDocs->map(fn($tf) => TfIdfHelper::computeTFIDF($tf, $idf));
+        // dd(vars: $tfidfDocs);
 
         // Dapatkan vektor TF-IDF untuk artikel target
         $targetIndex = $articles->search(fn($article) => $article->id === $articleId);
@@ -145,6 +146,10 @@ class ProjectController extends Controller
         foreach ($tfidfDocs as $index => $vector) {
             $similarities[$index] = self::cosineSimilarity($targetVector, $vector);
         }
+
+        // Tampilkan nilai cosine similarity
+        // dd(vars : $similarities);
+
         // Urutkan hasil berdasarkan nilai kesamaan
         arsort($similarities);
         // Ambil artikel dengan kesamaan tertinggi, kecuali artikel target

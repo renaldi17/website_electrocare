@@ -21,7 +21,7 @@
                 </div>
             </div>
             <br>
-            <button class="btn btn-danger" id="editButton">Edit</button>
+            <button class="btn btn-danger" id="editButton"><i class="fa-solid fa-pen-to-square"></i> | Edit</button>
 
         </div>
     </div>
